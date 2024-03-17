@@ -1,18 +1,16 @@
 package ru.diana.workingWithArrays.main;
-
-import ru.diana.workingWithArrays.util.Arrays;
-
+import ru.diana.workingWithArrays.util.ArrayGenerator;
 import static ru.diana.workingWithArrays.service.OperationWithArrays.*;
 
 public class Main {
     public static void main (String[] args) {
-        Arrays array = new Arrays(10, 100);
-        array.printArray();
-        checkEvenNumbers(array);
-        checkPrimeNumbers(array);
-        getSumNumbers(array);
-        getDifferenceSum(array);
-        checkCountZero(array);
-        arrangeTheNumbers(array);
+        int[] array = ArrayGenerator.generateRandomArray(10, 100);
+        printArray(array);
+        evenNumbers(array);
+        primeNumbers(array);
+        sumNumbers(array);
+        differenceSum(array);
+        countZero(array);
+        sortArray(array);
     }
 }
